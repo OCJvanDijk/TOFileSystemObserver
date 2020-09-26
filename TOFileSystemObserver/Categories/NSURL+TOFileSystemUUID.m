@@ -32,6 +32,11 @@ static NSString *kTOFileSystemAttributeKey = @"dev.tim.fileSystemObserver.UUID";
     kTOFileSystemAttributeKey = [NSString stringWithFormat:@"%@.fileSystemObserver.UUID", prefix];
 }
 
++ (void)to_setKeyName:(NSString *)keyName
+{
+    kTOFileSystemAttributeKey = keyName;
+}
+
 - (NSString *)to_fileSystemUUID
 {
     const char *filePath = [self.path fileSystemRepresentation];
