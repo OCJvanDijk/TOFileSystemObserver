@@ -33,8 +33,7 @@
                       NSURLContentModificationDateKey];
 
     // Set the flags for the enumerator
-    NSDirectoryEnumerationOptions options = NSDirectoryEnumerationSkipsHiddenFiles |
-                                            NSDirectoryEnumerationSkipsSubdirectoryDescendants;
+    NSDirectoryEnumerationOptions options = NSDirectoryEnumerationSkipsSubdirectoryDescendants;
 
     // Create the enumerator
     NSDirectoryEnumerator<NSURL *> *urlEnumerator = [self enumeratorAtURL:url

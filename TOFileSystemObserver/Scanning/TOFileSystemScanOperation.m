@@ -214,8 +214,8 @@ NSString * const kTOFileSystemTrashFolderName = @"/.Trash/";
     
     // Make sure it's not a hidden file
     NSString *name = url.lastPathComponent;
-    if ([name characterAtIndex:0] == '.') { return; }
-    
+//    if ([name characterAtIndex:0] == '.') { return; }
+
     // Check if it's a skipped one
     for (NSString *skippedFileName in self.skippedItems) {
         NSURL *skippedURL = [self.directoryURL URLByAppendingPathComponent:skippedFileName];
@@ -257,10 +257,10 @@ NSString * const kTOFileSystemTrashFolderName = @"/.Trash/";
     // Make sure that this file isn't hidden, or inside a hidden folder file 
     url = url.URLByStandardizingPath;
     NSString *relativePath = [url.path stringByReplacingOccurrencesOfString:directoryURL.path withString:@""];
-    if ([relativePath rangeOfString:@"/."].location != NSNotFound) {
-        return;
-    }
-    
+//    if ([relativePath rangeOfString:@"/."].location != NSNotFound) {
+//        return;
+//    }
+
     while (1) {
         // Get the parent folder
         url = [url URLByDeletingLastPathComponent].URLByStandardizingPath;
